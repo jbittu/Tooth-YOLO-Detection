@@ -1,12 +1,12 @@
 # Tooth Numbering Detection with YOLOv11  
 
-## 📌 Project Overview  
+##  Project Overview  
 This project implements **tooth numbering detection** using YOLOv11.  
 A dataset of dental radiographs with annotated tooth numbers was provided. The goal is to train a YOLO model that can accurately detect and classify teeth into **32 classes** following the FDI numbering system.  
 
 ---
 
-## 📂 Dataset  
+##  Dataset  
 - Dataset: **ToothNumber_TaskDataset**  
 - Contains dental images and YOLO-format labels (`.txt` files).  
 - Classes: 32 tooth numbers (0–31 in YOLO IDs).  
@@ -28,7 +28,7 @@ ToothNumber_TaskDataset/
 
 ---
 
-## ⚙️ Setup in Google Colab  
+##  Setup in Google Colab  
 
 ```bash
 # Clone ultralytics
@@ -40,7 +40,7 @@ from ultralytics import YOLO
 
 ---
 
-## 🚀 Training  
+##  Training  
 
 We trained YOLOv11m on the dataset:  
 
@@ -55,7 +55,7 @@ We trained YOLOv11m on the dataset:
 
 ---
 
-## 📊 Results  
+## Results  
 
 ### Validation Performance (val set)
 - **mAP50:** ~0.91  
@@ -69,7 +69,7 @@ This shows the model generalizes well to unseen images.
 
 ---
 
-## 🖼️ Inference  
+## Inference  
 
 Run inference on new images:  
 
@@ -84,7 +84,7 @@ runs/detect/predict/
 
 ---
 
-## 📌 Post-Processing (Optional but Recommended)  
+##  Post-Processing 
 To enforce anatomical correctness in predictions:  
 - Separate **upper vs lower arch** (Y-axis clustering).  
 - Split **left vs right** (X-midline).  
@@ -96,11 +96,11 @@ To enforce anatomical correctness in predictions:
 ## 📁 Repository Structure  
 
 ```
-├── tooth_project.ipynb    # Colab notebook
-├── ToothNumber_TaskDataset/   # Dataset
-├── runs/                  # Training logs and results
-├── tooth_data.yaml        # Dataset config
-├── README.md              # Documentation
+├── tooth_project.ipynb    
+├── ToothNumber_TaskDataset/   
+├── runs/                  
+├── tooth_data.yaml        
+├── README.md              
 ```
 
 
